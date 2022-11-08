@@ -5,6 +5,16 @@
 #include <stdio.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+/* switch variables for seperators */
+#define NO_SEPARATOR '\0'
+#define AND_LOGIC_SEP '&'
+#define OR_LOGIC_SEP '|'
+#define COMMAND_SEP ';'
 
 /* delimeter macros */
 #define NORM_DELIMS " \t\a\r\n"
@@ -76,6 +86,7 @@ typedef struct his_q_s
 
 /* main functionality */
 int start_shell(char **environ, char *exec_name);
+int do_shell_eof_or_newline(char *input, int bytes_read);
 queue_t *parse_string(char *input_str);
 int execute_commands(his_q_t *his_q, queue_t *command_q,
 char *envp[], char *exec_name);
