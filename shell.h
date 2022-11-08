@@ -2,6 +2,9 @@
 #define _SHELL_H_
 
 #include <unistd.h>
+#include <stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 /* delimeter macros */
 #define NORM_DELIMS " \t\a\r\n"
