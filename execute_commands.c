@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 
 int can_execute(command_t *command);
 int is_custom_command(char *token);

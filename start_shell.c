@@ -1,6 +1,6 @@
 #include "shell.h"
 
-int start_shell(char **environ, char *exec_name)
+int start_shell(char **environ, char *exec_name);
 void print_prompt(void);
 int do_shell_eof_or_newline(char *input, int bytes_read);
 

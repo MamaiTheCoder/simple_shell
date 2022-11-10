@@ -89,7 +89,7 @@ int start_shell(char **environ, char *exec_name);
 int do_shell_eof_or_newline(char *input, int bytes_read);
 queue_t *parse_string(char *input_str);
 int execute_commands(his_q_t *his_q, queue_t *command_q,
-char *envp[], char *exec_name);
+		char *envp[], char *exec_name);
 char *get_file_path(char *filename, char *envp[]);
 
 /* free memory */
