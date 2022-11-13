@@ -1,9 +1,7 @@
 #include "shell.h"
 
 /**
- *
  * _atoi - converts string to integer
- *
  * @s: string to convert from
  *
  * Return: integer from conversion
@@ -39,7 +37,6 @@ int _atoi(char *s)
 
 /**
  * _strlen - gets the length of a null byte terminated string
- *
  * @str: string to check length
  *
  * Return: length of string
