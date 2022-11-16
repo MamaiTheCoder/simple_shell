@@ -25,11 +25,8 @@ extern char **environ;
 
 /**
  * struct command_s - Structure of each node
- * 
  * @prev_valid: Check if previous command was successful
- *
  * @separator: Used for character that separates each command
- *
  * @command: Points to the first char in the stream
  *
  * @next: Address of next node
@@ -45,9 +42,7 @@ typedef struct command_s
 
 /**
  * struct queue_s - Structure of queue
- *
  * @front: Pointer to the first node
- *
  * @rear: Pointer to the front+1 node
  */
 typedef struct queue_s
@@ -56,13 +51,9 @@ typedef struct queue_s
 } queue_t;
 
 /**
- *
  * struct history_s - Structure of history queue
- *
  * @command: Holds the command from getline()
- *
  * @priority_number: Holds the number coorelated to the command input order
- *
  * @next: Pointer to the next node
  */
 typedef struct history_s
@@ -74,10 +65,8 @@ typedef struct history_s
 
 /**
  * struct his_q_s - Structure of queue
- *
  * @front: Pointer to the first node
- *
- *  @rear: Pointer to the front+1 node
+ * @rear: Pointer to the front+1 node
  */
 typedef struct his_q_s
 {
