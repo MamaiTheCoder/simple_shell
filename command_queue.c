@@ -55,31 +55,15 @@ int enqueue(queue_t *q, char separator, char **command)
 
 
 command_t *dequeue(queue_t *q)
-
 {
-
-		command_t *old_node = NULL;
-
-
-
-			if (!q->front)
-
-						return (NULL);
-
-
-
-				old_node = q->front;
-
-					q->front = q->front->next;
-
-
-
-						if (!q->front)
-
-									q->rear = NULL;
-
-
-
-							return (old_node);
-
+	command_t *old_node = NULL;
+	
+	if (!q->front)
+		return (NULL);
+	old_node = q->front;
+	q->front = q->front->next;
+	
+	if (!q->front)
+		q->rear = NULL;
+	return (old_node);
 }
