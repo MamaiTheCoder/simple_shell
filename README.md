@@ -9,3 +9,5 @@ The API calls predominantly used are read, write, fork, exec, and wait to name a
 * Some of the code could certainly be refactored to be more generic, for instance both history queues and command queues have entirely seperate data structures and functions, this could certainly be improved upon. As well as some of the ways traversal of the queues was handled.
 
 I am still overall very happy with the net result of this project as I learned tons about `memory management`, `string parsing`, and `process forking`.
+
+Authors are Emmanuel Mamai and Charity Makokha
