@@ -1,24 +1,31 @@
-#include "shell.h"
+#include "main.h"
 
 /**
- * exit_shell - Frees the queue and return exit code
+ * exit_shell - exits the shell
  *
- * @q: Pointer to the queue
- *
- * @status: exit code to exit with
- *
- * @his_q: history queue to free
- *
- * @environ: array of pointers to environmental variables
- *
- * Return: See macro values
+ * @datash: data relevant (status and args)
+ * Return: 0 on success.
  */
-
-void exit_shell(his_q_t *his_q, queue_t *q, int status, char **environ)
+int exit_shell(data_shell *datash)
 {
-	write_queue_to_file(his_q, environ);
+	unsigned int ustatus;
+	int is_digit;
+	int str_len;
+	int big_number;
 
-	free_command_queue(q);
-	free_history_queue(his_q);
-	exit(status);
+	if (datash->args[1] != NULL)
+	{
+		ustatus = _atoi(datash->args[1]);
+		is_digit = _isdigit(datash->args[1]);
+		str_len = _strlen(datash->args[1]);
+		big_number = ustatus > (unsigned int)INT_MAX;
+		if (!is_digit || str_len > 10 || big_number)
+		{
+			get_error(datash, 2);
+			datash->status = 2;
+			return (1);
+		}
+		datash->status = (ustatus % 256);
+	}
+	return (0);
 }
